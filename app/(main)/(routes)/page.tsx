@@ -1,6 +1,7 @@
 import { UserButton } from '@clerk/nextjs';
 import React from 'react';
 
+import { ModeToggle } from '@/components/mode-toggle';
 import { Button } from '@/components/ui/button';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       </p>
       <Button>Click Me</Button>
       <UserButton afterSignOutUrl="/" />
+      <ModeToggle />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import React from 'react';
 
 import { ModeToggle } from '@/components/mode-toggle';
 import { Button } from '@/components/ui/button';
+import { formatToKoreanNumberWithUnit } from '@/lib/numbers';
 
 export default function Home() {
   return (
@@ -11,11 +12,13 @@ export default function Home() {
         Party Cinema
       </h1>
       <p className="leading-7 [&:not(:first-child)]:mt-6">
-        This is a protected route. You can only see this if you&apos;re logged in.
+        {formatToKoreanNumberWithUnit(5138_7133, '명', {
+          floorUnit: 10_000,
+        })}
       </p>
+      <ModeToggle />
       <Button>Click Me</Button>
       <UserButton afterSignOutUrl="/" />
-      <ModeToggle />
     </div>
   );
 }

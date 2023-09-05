@@ -29,7 +29,7 @@ module.exports = withUt({
     },
     extend: {
       spacing: {
-        ...range(0, 400, 4).reduce((acc, px) => {
+        ...range(0, 400, 2).reduce((acc, px) => {
           acc[`${px}pxr`] = pxToRem(px);
           return acc;
         }, {}),
@@ -69,11 +69,17 @@ module.exports = withUt({
           foreground: 'hsl(var(--card-foreground))',
         },
         basic: 'hsl(var(--basic))',
+        ['background-primary']: 'hsl(var(--background-primary))',
+        ['background-modifier-accent']: 'hsl(var(--background-modifier-accent))',
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+        ...range(0, 48, 2).reduce((acc, px) => {
+          acc[`${px}pxr`] = pxToRem(px);
+          return acc;
+        }, {}),
       },
       keyframes: {
         'accordion-down': {

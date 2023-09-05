@@ -32,6 +32,8 @@ body,
     --radius: 0.5rem;
 
     --basic: 200 10% 4%;
+    --background-primary: 0 0% 100%;
+    --background-modifier-accent: 217 8% 81%;
   }
 
   .dark {
@@ -56,6 +58,8 @@ body,
     --ring: 346.8 77.2% 49.8%;
 
     --basic: 0 0% 95%;
+    --background-primary: 223 7% 21%;
+    --background-modifier-accent: 240 5% 22%;
   }
 }
 

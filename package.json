@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install",
-    "project-setup": "cp -n .env.example .env",
+    "project:setup": "cp -n .env.example .env",
     "prisma:studio": "npx prisma studio"
   },
   "lint-staged": {

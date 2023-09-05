@@ -1,6 +1,15 @@
 // @ts-check
 const { withUt } = require('uploadthing/tw');
 
+function pxToRem(px) {
+  return `${px / 16}rem`;
+}
+
+function range(start, end, step = 1) {
+  const length = (end - start) / step + 1;
+  return Array.from({ length }, (_, i) => start + i * step);
+}
+
 /** @type {import('tailwindcss').Config} */
 module.exports = withUt({
   darkMode: ['class'],
@@ -19,6 +28,12 @@ module.exports = withUt({
       },
     },
     extend: {
+      spacing: {
+        ...range(0, 400, 4).reduce((acc, px) => {
+          acc[`${px}pxr`] = pxToRem(px);
+          return acc;
+        }, {}),
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

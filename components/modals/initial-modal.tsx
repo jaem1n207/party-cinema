@@ -53,12 +53,12 @@ export function InitialModal() {
   return (
     <ClientOnly>
       <Dialog open>
-        <DialogContent className="p-0 overflow-hidden text-black bg-white">
+        <DialogContent className="p-0 overflow-hidden">
           <DialogHeader className="px-6 pt-8">
-            <DialogTitle className="text-2xl text-center">서버를 만들어보세요</DialogTitle>
-            <DialogDescription className="text-center text-zinc-500">
-              서버를 만들면 친구들과 함께 어울리는 공간이 만들어집니다.
-              <br />내 서버를 만들고 대화를 시작해보세요.
+            <DialogTitle className="text-2xl">서버를 만들어보세요</DialogTitle>
+            <DialogDescription>
+              서버를 만들면 친구들과 함께 어울리는 공간이 만들어져요
+              <br />내 서버를 만들고 대화를 시작해보세요
             </DialogDescription>
           </DialogHeader>
           <Form {...form}>
@@ -87,23 +87,16 @@ export function InitialModal() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-xs font-bold text-zinc-500 dark:text-secondary/70">
-                        서버 이름
-                      </FormLabel>
+                      <FormLabel className="font-bold">서버 이름</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="홍길동의 서버"
-                          disabled={isSubmitting}
-                          className="text-black border-0 bg-zinc-300/50 focus-visible:ring-0 focus-visible:ring-offset-0"
-                          {...field}
-                        />
+                        <Input placeholder="홍길동의 서버" disabled={isSubmitting} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
               </div>
-              <DialogFooter className="px-6 py-4 bg-gray-100">
+              <DialogFooter className="px-6 py-4">
                 <Button disabled={isSubmitting}>서버 만들기</Button>
               </DialogFooter>
             </form>

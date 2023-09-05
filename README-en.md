@@ -19,7 +19,7 @@ Party Cinema is a web application that brings the joy of watching videos togethe
 - Framework: Next.js
 - Real-time messaging: Socket.IO
 - ORM: Prisma
-- Database: MySQL using PlanetScale
+- Database: MySQL
 - Real-time Video/Audio: Livekit
 
 ## Installation & Setup

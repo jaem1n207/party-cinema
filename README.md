@@ -19,7 +19,7 @@
 - 프레임워크: Next.js
 - 실시간 메시징: Socket.IO
 - ORM: Prisma
-- 데이터베이스: MySQL (PlanetScale 사용)
+- 데이터베이스: MySQL
 - 실시간 비디오/오디오: Livekit
 
 ## 설치 및 설정

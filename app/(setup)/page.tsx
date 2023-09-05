@@ -21,9 +21,5 @@ export default async function SetupPage() {
     return redirect(`/server/${server.id}`);
   }
 
-  return (
-    <div>
-      <InitialModal />
-    </div>
-  );
+  return <InitialModal />;
 }

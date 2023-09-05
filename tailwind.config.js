@@ -1,5 +1,8 @@
+// @ts-check
+const { withUt } = require('uploadthing/tw');
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module.exports = withUt({
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -50,6 +53,7 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        basic: 'hsl(var(--basic))',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -73,4 +77,4 @@ module.exports = {
     },
   },
   plugins: [require('tailwindcss-animate')],
-};
+});

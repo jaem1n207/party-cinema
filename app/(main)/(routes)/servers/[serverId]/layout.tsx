@@ -31,9 +31,7 @@ export default async function ServerIdLayout({ children, params }: ServerIdLayou
 
   return (
     <>
-      <div className="flex-col flex-grow-0 flex-shrink-0 hidden overflow-hidden bg-background-secondary md:flex w-240pxr basis-auto">
-        <ServerSidebar serverId={params.serverId} />
-      </div>
+      <ServerSidebar serverId={params.serverId} />
       <div className="relative flex flex-col flex-1 overflow-hidden">{children}</div>
     </>
   );

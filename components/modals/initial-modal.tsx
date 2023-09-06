@@ -48,6 +48,7 @@ export function InitialModal() {
   });
 
   const isSubmitting = form.formState.isSubmitting;
+  const isDisabledSubmitButton = !form.formState.isValid || isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
@@ -56,7 +57,9 @@ export function InitialModal() {
       form.reset();
       router.refresh();
       window.location.reload();
-    } catch (error) {}
+    } catch (error) {
+      console.error(`[InitialModal] ${error}`);
+    }
   };
 
   return (
@@ -106,9 +109,7 @@ export function InitialModal() {
                 />
               </div>
               <DialogFooter className="px-6 py-4">
-                <Button type="submit" disabled={isSubmitting}>
-                  서버 만들기
-                </Button>
+                <Button disabled={isDisabledSubmitButton}>서버 만들기</Button>
               </DialogFooter>
             </form>
           </Form>

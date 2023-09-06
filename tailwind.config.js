@@ -12,6 +12,10 @@ function range(start, end, step = 1) {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = withUt({
+  future: {
+    // https://github.com/tailwindlabs/tailwindcss/pull/8394
+    hoverOnlyWhenSupported: true,
+  },
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',

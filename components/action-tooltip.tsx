@@ -3,14 +3,14 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 type ActionTooltipProps = {
-  label: string;
+  content: React.ReactNode;
   children: React.ReactNode;
   side?: 'top' | 'right' | 'bottom' | 'left';
   align?: 'start' | 'center' | 'end';
 };
 
 export default function ActionTooltip({
-  label,
+  content,
   children,
   side = 'top',
   align = 'center',
@@ -22,7 +22,7 @@ export default function ActionTooltip({
           <div className="relative">{children}</div>
         </TooltipTrigger>
         <TooltipContent side={side} align={align}>
-          <p className="text-base font-semibold">{label}</p>
+          {content}
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

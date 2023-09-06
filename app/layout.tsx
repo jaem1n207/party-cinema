@@ -13,7 +13,29 @@ const openSans = Open_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Party Cinema',
-  description: 'Watch videos with your friends, chat, and hangout online.',
+  description: 'Watch videos together, chat, and hang out online with Party Cinema.',
+  openGraph: {
+    title: 'Party Cinema',
+    description: 'Watch videos together, chat, and hang out online with Party Cinema.',
+    url: 'http://localhost:3000',
+    siteName: 'Party Cinema',
+    locale: 'ko_KR',
+    type: 'website',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
+  themeColor: [
+    {
+      media: '(prefers-color-scheme: light)',
+      color: '#ffffff',
+    },
+    {
+      media: '(prefers-color-scheme: dark)',
+      color: '#303338',
+    },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

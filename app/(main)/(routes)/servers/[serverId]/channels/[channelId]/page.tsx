@@ -33,9 +33,9 @@ export async function generateMetadata({ params }: ChannelIdPageProps): Promise<
     };
 
   return {
-    title: `Party Cinema | ${channel?.name} | ${server?.name}`,
+    title: `Party Cinema | #${channel?.name} | ${server?.name}`,
     openGraph: {
-      title: `Party Cinema | ${channel?.name} | ${server?.name}`,
+      title: `Party Cinema | #${channel?.name} | ${server?.name}`,
       url: `http://localhost:3000/servers/${params.serverId}/channels/${params.channelId}`,
       siteName: 'Party Cinema',
       locale: 'ko_KR',

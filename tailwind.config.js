@@ -34,6 +34,12 @@ module.exports = withUt({
           return acc;
         }, {}),
       },
+      maxWidth: {
+        ...range(0, 1000).reduce((acc, px) => {
+          acc[`${px}pxr`] = pxToRem(px);
+          return acc;
+        }, {}),
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -70,7 +76,9 @@ module.exports = withUt({
         },
         basic: 'hsl(var(--basic))',
         ['background-primary']: 'hsl(var(--background-primary))',
+        ['background-secondary']: 'hsl(var(--background-secondary))',
         ['background-modifier-accent']: 'hsl(var(--background-modifier-accent))',
+        ['header-primary']: 'hsl(var(--header-primary))',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -97,5 +105,5 @@ module.exports = withUt({
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'), require('@tailwindcss/line-clamp')],
 });

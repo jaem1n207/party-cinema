@@ -33,7 +33,7 @@ export default async function NavigationSidebar() {
     >
       <NavigationAction />
 
-      <Separator className="mx-auto rounded-md h-2pxr bg-zinc-300 dark:bg-zinc-700 !w-32pxr" />
+      <Separator className="mx-auto rounded-md h-2pxr bg-background-modifier-accent !w-32pxr" />
 
       <ScrollArea className="flex-1 w-full">
         {servers.map((server) => {
@@ -45,7 +45,7 @@ export default async function NavigationSidebar() {
         })}
       </ScrollArea>
 
-      <Separator className="mx-auto rounded-md h-2pxr bg-zinc-300 dark:bg-zinc-700 !w-32pxr" />
+      <Separator className="mx-auto rounded-md h-2pxr bg-background-modifier-accent !w-32pxr" />
 
       <div className="flex flex-col items-center mt-auto pb-12pxr gap-y-16pxr">
         <ModeToggle />

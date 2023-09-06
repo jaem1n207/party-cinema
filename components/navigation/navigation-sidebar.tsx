@@ -5,6 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import { currentProfile } from '@/lib/current-profile';
 import { db } from '@/lib/db';
 
+import DraggableList from '../draggable-list';
 import { ModeToggle } from '../mode-toggle';
 import { ScrollArea } from '../ui/scroll-area';
 
@@ -43,6 +44,10 @@ export default async function NavigationSidebar() {
             </div>
           );
         })}
+
+        {/* draggable test */}
+        <div className="h-200pxr" />
+        <DraggableList />
       </ScrollArea>
 
       <Separator className="mx-auto rounded-md h-2pxr bg-background-modifier-accent !w-32pxr" />

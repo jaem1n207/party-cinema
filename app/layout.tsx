@@ -5,6 +5,7 @@ import './globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
 import { Open_Sans } from 'next/font/google';
 
+import { ModalProvier } from '@/components/providers/modal-provider';
 import { ThemeProvider } from '@/components/providers/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
@@ -43,7 +44,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <ClerkProvider>
       <html lang="ko" suppressHydrationWarning>
         <body className={cn(openSans.className, 'bg-white dark:bg-[#303338] select-none')}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            storageKey="party-cinema-theme"
+          >
+            <ModalProvier />
             {children}
           </ThemeProvider>
           <Toaster />

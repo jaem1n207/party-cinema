@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <ClerkProvider>
       <html lang="ko" suppressHydrationWarning>
-        <body className={cn(openSans.className, 'bg-white dark:bg-[#303338]')}>
+        <body className={cn(openSans.className, 'bg-white dark:bg-[#303338] select-none')}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {children}
           </ThemeProvider>

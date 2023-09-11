@@ -38,6 +38,24 @@ module.exports = withUt({
           return acc;
         }, {}),
       },
+      minHeight: {
+        ...range(0, 1000).reduce((acc, px) => {
+          acc[`${px}pxr`] = pxToRem(px);
+          return acc;
+        }, {}),
+      },
+      maxHeight: {
+        ...range(0, 1000).reduce((acc, px) => {
+          acc[`${px}pxr`] = pxToRem(px);
+          return acc;
+        }, {}),
+      },
+      minWidth: {
+        ...range(0, 1000).reduce((acc, px) => {
+          acc[`${px}pxr`] = pxToRem(px);
+          return acc;
+        }, {}),
+      },
       maxWidth: {
         ...range(0, 1000).reduce((acc, px) => {
           acc[`${px}pxr`] = pxToRem(px);
@@ -79,10 +97,14 @@ module.exports = withUt({
           foreground: 'hsl(var(--card-foreground))',
         },
         basic: 'hsl(var(--basic))',
+        ['basic-500']: 'hsl(var(--basic-500))',
         ['background-primary']: 'hsl(var(--background-primary))',
         ['background-secondary']: 'hsl(var(--background-secondary))',
         ['background-modifier-accent']: 'hsl(var(--background-modifier-accent))',
         ['header-primary']: 'hsl(var(--header-primary))',
+        ['brand-experiment-360']: 'hsl(var(--brand-experiment-360))',
+        ['status-danger']: 'hsl(var(--status-danger))',
+        ['button-danger-background']: 'hsl(var(--button-danger-background))',
       },
       borderRadius: {
         lg: 'var(--radius)',

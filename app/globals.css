@@ -38,10 +38,14 @@ body,
     --radius: 0.5rem;
 
     --basic: 200 10% 4%;
+    --basic-500: 228 6% 33%;
     --background-primary: 0 0% 100%;
     --background-secondary: 220 13% 95%;
     --background-modifier-accent: 217 8% 81%;
     --header-primary: 240 8% 3%;
+    --brand-experiment-360: 235 86% 65%;
+    --status-danger: 358 69% 54%;
+    --button-danger-background: 358 69% 54%;
   }
 
   .dark {
@@ -66,10 +70,14 @@ body,
     --ring: 346.8 77.2% 49.8%;
 
     --basic: 0 0% 95%;
+    --basic-500: 210 9% 79%;
     --background-primary: 223 7% 21%;
     --background-secondary: 220 7% 18%;
     --background-modifier-accent: 240 5% 22%;
     --header-primary: 220 13% 95%;
+    --brand-experiment-360: 235, 86%, 77%;
+    --status-danger: 359 87% 60%;
+    --button-danger-background: 358 69% 54%;
   }
 }
 

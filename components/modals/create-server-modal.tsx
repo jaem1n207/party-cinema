@@ -1,7 +1,3 @@
-/**
- * 사용자가 서버를 가지고 있지 않을 때만 렌더링되는 특정한 방식으로 처리됩니다.
- * 따라서 Modal Provider에 영향을 받지 않도록 설계되었습니다.
- */
 'use client';
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
@@ -30,6 +26,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { useModal } from '@/hooks/use-modal-store';
 
 const formSchema = z.object({
   name: z.string().min(1, {
@@ -40,8 +37,11 @@ const formSchema = z.object({
   }),
 });
 
-export function InitialModal() {
+export function CreateServerModal() {
+  const { type, isOpen, onClose } = useModal();
   const router = useRouter();
+
+  const isModalOpen = isOpen && type === 'createServer';
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -54,21 +54,26 @@ export function InitialModal() {
   const isSubmitting = form.formState.isSubmitting;
   const isDisabledSubmitButton = !form.formState.isValid || isSubmitting;
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  const handleFormSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       await axios.post('/api/servers', values);
 
       form.reset();
       router.refresh();
-      window.location.reload();
+      onClose();
     } catch (error) {
-      console.error(`[InitialModal] ${error}`);
+      console.error(`[CreateServerModal] ${error}`);
     }
+  };
+
+  const handleModalClose = () => {
+    form.reset();
+    onClose();
   };
 
   return (
     <ClientOnly>
-      <Dialog open>
+      <Dialog open={isModalOpen} onOpenChange={handleModalClose}>
         <DialogContent className="p-0 overflow-hidden">
           <DialogHeader className="px-6 pt-8">
             <DialogTitle className="text-2xl">서버를 만들어보세요</DialogTitle>
@@ -78,7 +83,7 @@ export function InitialModal() {
             </DialogDescription>
           </DialogHeader>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-8">
               <div className="px-6 space-y-8">
                 <div className="flex items-center justify-center text-center">
                   <FormField

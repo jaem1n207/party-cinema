@@ -35,7 +35,7 @@ export function ServerHeader({ server, role }: ServerHeaderProps) {
     <DropdownMenu>
       <DropdownMenuTrigger className="focus:outline-none" asChild>
         <button className="flex items-center w-full text-base font-semibold transition border-b-2 px-12pxr h-48pxr border-neutral-200 dark:border-neutral-800 hover:bg-background-primary">
-          <span className="truncate">{server.name}</span>
+          <span className="line-clamp-1">{server.name}</span>
           <ChevronDown className="ml-auto h-20pxr w-20pxr min-w-20pxr min-h-20pxr" />
         </button>
       </DropdownMenuTrigger>

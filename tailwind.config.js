@@ -131,5 +131,5 @@ module.exports = withUt({
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), require('@tailwindcss/line-clamp')],
+  plugins: [require('tailwindcss-animate')],
 });

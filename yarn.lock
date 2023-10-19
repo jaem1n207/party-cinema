@@ -914,17 +914,24 @@
   integrity sha512-UDySsPbdi7wp52WG7mp5CiZwaTvokDubqhm1xhFm73Bqhp0PsGbwSSF5PdCXH4fe8Y4EKGrMyWQ4i1fF9+DVVQ==
 
 "@uploadthing/react@^5.5.0":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@uploadthing/react/-/react-5.5.0.tgz#d9f948b12dedae01a6e20f39e5f70afa62bd5cf8"
-  integrity sha512-50VduVEqDJwEyT9GDxCAzI5V28/5tD9Rddsmwt/ciCJG8J+sg3C9oHAvhEm9MWYf3h0YVi/fgtpYLg64Y8PSAA==
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/@uploadthing/react/-/react-5.7.0.tgz#3bae340265154a31ad4624dcbfb83de0993d823a"
+  integrity sha512-rSBzoC2eMRM2d6Mpis6RXfo1Y5JsV7oJanTmaVdltFLRxbO/4lwK1kvHM4qwDUvn01UpxBtcVayimMBXNJ0V8Q==
   dependencies:
-    "@uploadthing/shared" "^5.2.1"
+    "@uploadthing/shared" "^5.2.5"
+    attr-accept "^2.2.2"
+    file-selector "^0.6.0"
     tailwind-merge "^1.13.2"
 
 "@uploadthing/shared@^5.2.1":
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-5.2.1.tgz#525f4943c98f02128f5ea56953c803078b00047e"
   integrity sha512-ISb78wuHqU5F/7TVw/3eO0VHQdSx3qdN7I4R4knHynuWFjgJjfUsc+zAAAtpo0UZlwfjIQIv/WtSwxdlNxRPGw==
+
+"@uploadthing/shared@^5.2.5":
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-5.2.5.tgz#753b9d3bcbf489b8a4d348c9412391b72c817a67"
+  integrity sha512-b6Nr0YzV9iinVK9OydBVQH0xPQEPgw7ty/q9aQbEnRQedc4TqARaYQEoMvTu7bRuiK7MIpKodzVTQdFKHhMLTg==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
